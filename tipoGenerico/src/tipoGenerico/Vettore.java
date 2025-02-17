@@ -9,6 +9,8 @@ public class Vettore<T> {
         this.vettore=(T[]) new Object[dimensione];
     }
 
+    public T getElemento(int index){ return vettore[index]; }
+
     public void add(T obj) throws ArrayIndexOutOfBoundsException,Exception{
         try {
             this.vettore[this.elementiInseriti++]=obj;
@@ -40,6 +42,6 @@ public class Vettore<T> {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return 0;
+        return -1;
     }
 }

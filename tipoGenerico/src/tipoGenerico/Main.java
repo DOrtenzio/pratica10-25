@@ -23,16 +23,16 @@ public class Main {
         Infisso temp=new Infisso("Legno",40,50);
         Mobile temp2=new Mobile(100.0,10.0);
         try {
-            if (infissoVettore.ricerca(temp)==0){
+            if (infissoVettore.ricerca(temp)==-1){
                 System.out.println("Elemento non trovato");
             }else{
-                System.out.println("Trovato");
+                System.out.println(infissoVettore.getElemento(infissoVettore.ricerca(temp)));
             }
 
-            if(mobileVettore.ricerca(temp2)==0){
+            if(mobileVettore.ricerca(temp2)==-1){
                 System.out.println("Elemento non trovato");
             }else{
-                System.out.println("Trovato");
+                System.out.println(mobileVettore.getElemento(mobileVettore.ricerca(temp2)));
             }
         } catch (Exception e) {
             System.err.println(e.getMessage());
